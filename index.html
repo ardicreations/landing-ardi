@@ -6,7 +6,7 @@
   <title>Ardi Creations</title>
 
   <style>
-    /* Reset básico */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +19,13 @@
       overflow: hidden;
     }
 
-    body {
+    /* Contenedor de la imagen */
+    .bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: url('landing.jpg') no-repeat center center;
       background-size: cover;
 
@@ -31,23 +37,17 @@
     @keyframes fadeIn {
       0% {
         opacity: 0;
-        transform: scale(1.02); /* ligero zoom al inicio */
+        transform: scale(1.02);
       }
       100% {
         opacity: 1;
         transform: scale(1);
       }
     }
-
-    /* Asegura que la imagen cubra toda la pantalla en móvil */
-    @media (max-width: 768px) {
-      body {
-        background-size: cover;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- Toda la landing es la imagen -->
+  <!-- Contenedor con la imagen de fondo -->
+  <div class="bg-image"></div>
 </body>
 </html>
